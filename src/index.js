@@ -29,3 +29,12 @@ export function caesar(string, shift) {
         return letter === letter.toUpperCase() ?  newLetter.toUpperCase() : newLetter;
     })
 }
+
+export function analArr(arr) {
+    return {
+        min: Math.min(...arr),
+        max: Math.max(...arr),
+        average: Math.round(arr.reduce((acc, num) => acc + num, 0) / arr.length),
+        length: arr.length
+    }
+}
